@@ -45,7 +45,7 @@ export function ContactForm() {
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
   const [turnstileVisible, setTurnstileVisible] = useState(false)
   const turnstileRef = useRef<HTMLDivElement>(null)
-  const turnstileWidgetId = useRef<string>(undefined)
+  const turnstileWidgetId = useRef<string | null>(null)
 
   useEffect(() => {
     formLoadedAt.current = Date.now()
@@ -61,6 +61,7 @@ export function ContactForm() {
 
     const renderWidget = () => {
       if (!(window.turnstile && turnstileRef.current)) return
+      if (turnstileWidgetId.current) return
       turnstileWidgetId.current = window.turnstile.render(
         turnstileRef.current,
         {
@@ -83,8 +84,15 @@ export function ContactForm() {
 
     return () => {
       window.removeEventListener('turnstile:loaded', renderWidget)
-      if (turnstileWidgetId.current && window.turnstile) {
-        window.turnstile.remove(turnstileWidgetId.current)
+      const widgetId = turnstileWidgetId.current
+      if (widgetId && window.turnstile) {
+        try {
+          window.turnstile.remove(widgetId)
+        } catch {
+          // Defensive cleanup for cases where Turnstile already detached the node.
+        } finally {
+          turnstileWidgetId.current = null
+        }
       }
     }
   }, [handleTurnstileVerify])

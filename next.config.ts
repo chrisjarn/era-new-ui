@@ -237,10 +237,6 @@ const nextConfig: NextConfig = {
     },
   ],
   rewrites: async () => [
-    {
-      source: '/',
-      destination: '/home',
-    },
     // Sanity Studio uses client-side routing — serve the same page for all sub-paths
     {
       source: '/studio/:path+',
