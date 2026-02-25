@@ -84,8 +84,7 @@ export function Navigation() {
           </ul>
           <div
             className={cn(
-              'dt:absolute dt:left-1/2  dt:grid dt:place-items-center',
-              s.brandDock
+              'dt:absolute dt:left-1/2 dt:-translate-x-1/2 dt:grid dt:place-items-center'
             )}
           >
             <Link
@@ -95,7 +94,7 @@ export function Navigation() {
             >
               <EraLogo
                 className={cn(
-                  'w-auto dt:dr-h-40 dr-h-28',
+                  'w-auto dt:dr-h-34 dr-h-28',
                   s.brandLogo,
                   s.brandLogoDesktop
                 )}
