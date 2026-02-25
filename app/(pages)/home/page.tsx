@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
 import { sanityFetch } from '~/sanity/lib/live'
 import { HOME_PAGE_FULL_QUERY } from '~/sanity/lib/queries'
 import { Wrapper } from '../_components/wrapper'
@@ -43,7 +44,15 @@ function nu<T>(value: T | null | undefined): T | undefined {
   return value ?? undefined
 }
 
-export default async function Home() {
+export default function Home() {
+  return (
+    <Suspense fallback={<HomeFallback />}>
+      <HomeContent />
+    </Suspense>
+  )
+}
+
+async function HomeContent() {
   const { data } = await sanityFetch({ query: HOME_PAGE_FULL_QUERY })
   const homePage = data?.homePage
   const config = data?.siteConfig
@@ -166,6 +175,18 @@ export default async function Home() {
         }))}
         copyrightHolder={nu(config?.copyrightHolder)}
       />
+    </Wrapper>
+  )
+}
+
+function HomeFallback() {
+  return (
+    <Wrapper
+      theme="dark"
+      lenis={{}}
+      className="mx-auto bg-primary max-w-screen overflow-x-clip"
+    >
+      <div className="min-h-screen" />
     </Wrapper>
   )
 }

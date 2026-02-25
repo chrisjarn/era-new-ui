@@ -33,7 +33,6 @@ export async function GET(request: Request) {
     link: `${baseUrl}/blog`,
     language: 'en',
     image: `${baseUrl}/og-image.png`,
-    favicon: `${baseUrl}/favicon.ico`,
     copyright: `All rights reserved ${new Date().getFullYear()}, ERA Safety`,
     feedLinks: {
       rss2: `${baseUrl}/blog/feed.xml`,

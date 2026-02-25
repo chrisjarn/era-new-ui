@@ -31,7 +31,7 @@ export function PlatformOverview({
 }: PlatformOverviewProps) {
   const resolvedLeadIn = leadIn ?? 'INTRODUCING ERA'
   const resolvedTitle =
-    title ?? 'One platform. One workflow.\nComplete Readiness.'
+    title ?? 'One platform.\nOne workflow.\nComplete Readiness.'
   const resolvedSubtitle =
     subtitle ??
     'ERA replaces fragmented systems with a central coordination engine — turning plans into action and action into proof. A mobile-first system built for real incidents, not just audits. Stay in control with real-time accountability and clear next actions.'
@@ -58,7 +58,7 @@ export function PlatformOverview({
     >
       <div className="dr-layout-grid">
         <div className="dt:col-start-1 dt:col-end-5 col-span-full dr-mb-56 dt:dr-mb-0">
-          <TitleBlock className="items-start dt:dr-mb-40 dr-mb-32 px-0!">
+          <TitleBlock className="items-start dt:dr-mb-40 dr-mb-32" style={{ paddingInline: 0 }}>
             <TitleBlock.LeadIn className="dr-mb-16 dt:dr-mb-24">
               {resolvedLeadIn}
             </TitleBlock.LeadIn>
@@ -72,7 +72,7 @@ export function PlatformOverview({
                 </span>
               ))}
             </TitleBlock.Title>
-            <TitleBlock.Subtitle className="text-left dr-w-180 dt:dr-w-350">
+            <TitleBlock.Subtitle className="text-left w-full dt:dr-w-350">
               {resolvedSubtitle}
             </TitleBlock.Subtitle>
           </TitleBlock>

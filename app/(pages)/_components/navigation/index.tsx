@@ -155,7 +155,7 @@ export function Navigation() {
               {isMobileNavOpened ? (
                 <CloseIcon className="dr-w-16" />
               ) : (
-                <NavMobile className="dr-w-16" />
+                <NavMobile className="dr-w-16 text-white" />
               )}
             </Button>
           </div>

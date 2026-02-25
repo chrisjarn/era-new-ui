@@ -35,9 +35,6 @@ export const siteConfig = {
     title: 'ERA Safety | Every second counts. Every person accounted for.',
     description:
       'The closed-loop emergency response platform that captures hazards, trains your people, runs your drills, manages real emergencies, and proves you did it right.',
-    icons: {
-      icon: '/favicon.ico',
-    },
     openGraph: {
       title: 'ERA Safety | Every second counts. Every person accounted for.',
       description:

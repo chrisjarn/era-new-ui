@@ -49,7 +49,7 @@ export function generateBlogPostSchema({
       name: 'ERA Safety',
       logo: {
         '@type': 'ImageObject',
-        url: `${normalizedBaseUrl}/icon.png`,
+        url: `${normalizedBaseUrl}/opengraph-image.jpg`,
       },
     },
     mainEntityOfPage: {

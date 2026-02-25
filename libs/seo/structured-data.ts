@@ -34,7 +34,7 @@ export function getRootStructuredData({
         url: baseUrl,
         logo: {
           '@type': 'ImageObject',
-          url: `${baseUrl}/icon.png`,
+          url: `${baseUrl}/opengraph-image.jpg`,
         },
         sameAs: filteredSameAs,
         description,
