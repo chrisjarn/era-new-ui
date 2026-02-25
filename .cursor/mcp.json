@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "tambo": {
+      "url": "https://mcp.tambo.co/mcp"
+    },
+    "agentation": {
+      "command": "npx",
+      "args": ["-y", "agentation-mcp"]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+# ERA Safety
+
+> Location. Capture. Improve. Respond.
+
+ERA Safety is the closed-loop emergency response platform that connects people, sites, and responsibilities into one coordinated workflow.
+
+## Platform Pillars
+
+### 1. Critical
+Live incident coordination, safe lists, response tasks, and simulation workflows that mirror real emergencies.
+
+### 2. Capture
+Hazard, incident, and operational reporting with ownership, deadlines, and follow-up.
+
+### 3. Improve
+Competency mapping, training oversight, debrief feedback loops, and readiness tracking.
+
+### 4. My Site
+Area structures, warden assignments, plans, diagrams, and document oversight across one site or multiple properties.
+
+## Sectors Served
+
+- Healthcare
+- Aged Care
+- Government & Councils
+- Commercial Property & Retail
+- Education
+
+## Compliance
+
+- AS3745-2010 (Planning for emergencies in facilities)
+- AS4083-2010 (Planning for emergencies — Health care facilities)
+- Work Health and Safety (WHS) regulations
+- ISO 45001 (Occupational health and safety management systems)
+
+## Contact
+
+- Website: https://erasafety.net
+- Email: sales@erasafety.net
+
+## About
+
+ERA Safety is developed by Emergency Response Alliance Pty Ltd.

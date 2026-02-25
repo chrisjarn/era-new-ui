@@ -1,0 +1,23 @@
+.section {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25vh;
+    background: linear-gradient(
+      to bottom,
+      var(--color-black) 0%,
+      transparent 100%
+    );
+    z-index: 2;
+  }
+
+  @media (--mobile) {
+    &::before {
+      height: 15vh;
+      z-index: 1;
+    }
+  }
+}

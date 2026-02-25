@@ -1,0 +1,50 @@
+.container {
+  --skew: calc(var(--skew-progress, 0) - var(--deskew-progress, 0));
+
+  transform: translateY(calc((var(--skew, 0)) * 15%));
+}
+
+.card {
+  --index: 0;
+  --deg: calc(var(--deg-progress, 0deg) - var(--dedeg-progress, 0deg));
+
+  transform-origin: left center;
+  /* transform: translateX(calc(var(--index) * -8%))
+    translateY(calc(var(--index) * -8%)) skewY(var(--deg)); */
+  transform: translateX(calc(var(--index) * -8% * var(--skew, 0)))
+    translateY(
+      calc(
+        var(--index) *
+        -8% *
+        var(--skew, 0) +
+        -20% *
+        var(--highlight-progress, 0)
+      )
+    )
+    skewY(var(--deg, 0deg));
+}
+
+.card:nth-of-type(1) {
+  --index: -2;
+}
+
+.card:nth-of-type(2) {
+  --index: -1;
+}
+
+.card:nth-of-type(3) {
+  --index: 0;
+}
+
+.card:nth-of-type(4) {
+  --index: 1;
+}
+
+.seatsQuestion {
+  transform: translateY(
+    calc(
+      (var(--sq-transform-intro, 150) + var(--sq-transform-seats-thinking, 0)) *
+      1%
+    )
+  );
+}

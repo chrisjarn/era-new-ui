@@ -1,0 +1,636 @@
+{
+  "edges": [
+    {
+      "from_file": "components/real-viewport/index.tsx",
+      "from_func": "RealViewport",
+      "to_file": "components/real-viewport/index.tsx",
+      "to_func": "debounce"
+    },
+    {
+      "from_file": "hooks/use-transform.tsx",
+      "from_func": "useTransform",
+      "to_file": "hooks/use-transform.tsx",
+      "to_func": "addCallback"
+    },
+    {
+      "from_file": "components/kinesis/index.tsx",
+      "from_func": "Kinesis",
+      "to_file": "hooks/use-mouse-move.ts",
+      "to_func": "useMouseMove"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getConfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isShopifyConfigured"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "fromTo",
+      "to_file": "libs/utils.ts",
+      "to_func": "ease"
+    },
+    {
+      "from_file": "webgl/utils/fluid/index.tsx",
+      "from_func": "useFluidSim",
+      "to_file": "webgl/utils/fluid/index.tsx",
+      "to_func": "updateMouse"
+    },
+    {
+      "from_file": "hooks/use-transform.tsx",
+      "from_func": "TransformProvider",
+      "to_file": "hooks/use-transform.tsx",
+      "to_func": "update"
+    },
+    {
+      "from_file": "styles/scripts/generate-tailwind.ts",
+      "from_func": "generateTailwind",
+      "to_file": "styles/scripts/utils.ts",
+      "to_func": "formatObject"
+    },
+    {
+      "from_file": "app/blog/page.tsx",
+      "from_func": "BlogPage",
+      "to_file": "libs/get-posts.ts",
+      "to_func": "getPostListItems"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "getTransform"
+    },
+    {
+      "from_file": "components/image/index.tsx",
+      "from_func": "generateBlurDataURL",
+      "to_file": "components/image/index.tsx",
+      "to_func": "generateShimmer"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "libs/spam-protection.ts",
+      "to_func": "isSpammyContent"
+    },
+    {
+      "from_file": "components/kinesis/index.tsx",
+      "from_func": "Kinesis",
+      "to_file": "hooks/use-device-detection.ts",
+      "to_func": "useDeviceDetection"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useMarker",
+      "to_file": "libs/utils.ts",
+      "to_func": "clamp"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "libs/spam-protection.ts",
+      "to_func": "isValidSubmissionTime"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getUnconfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isHubSpotConfigured"
+    },
+    {
+      "from_file": "webgl/utils/fluid/index.tsx",
+      "from_func": "useFluidSim",
+      "to_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "to_func": "useTheatre"
+    },
+    {
+      "from_file": "components/image/index.tsx",
+      "from_func": "generateBlurDataURL",
+      "to_file": "components/image/index.tsx",
+      "to_func": "toBase64"
+    },
+    {
+      "from_file": "hooks/use-transform.tsx",
+      "from_func": "TransformProvider",
+      "to_file": "hooks/use-transform.tsx",
+      "to_func": "useTransform"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "useMarker"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "libs/utils.ts",
+      "to_func": "mapRange"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "libs/spam-protection.ts",
+      "to_func": "verifyTurnstileToken"
+    },
+    {
+      "from_file": "components/animated-gradient/webgl.tsx",
+      "from_func": "WebGLAnimatedGradient",
+      "to_file": "webgl/hooks/use-webgl-rect.ts",
+      "to_func": "useWebGLRect"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-transform.tsx",
+      "to_func": "useTransform"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "isNumber"
+    },
+    {
+      "from_file": "styles/scripts/generate-root.ts",
+      "from_func": "generateRoot",
+      "to_file": "styles/scripts/utils.ts",
+      "to_func": "formatObject"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "app/api/contact/route.ts",
+      "to_func": "getClientIp"
+    },
+    {
+      "from_file": "app/blog/feed.xml/route.ts",
+      "from_func": "GET",
+      "to_file": "libs/get-posts.ts",
+      "to_func": "getPostListItems"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "stagger",
+      "to_file": "libs/utils.ts",
+      "to_func": "mapRange"
+    },
+    {
+      "from_file": "orchestra/theatre/r3f.tsx",
+      "from_func": "Group",
+      "to_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "to_func": "useTheatre"
+    },
+    {
+      "from_file": "app/layout.tsx",
+      "from_func": "Layout",
+      "to_file": "libs/seo/structured-data.ts",
+      "to_func": "serializeJsonLd"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getConfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isMandrillConfigured"
+    },
+    {
+      "from_file": "app/layout.tsx",
+      "from_func": "Layout",
+      "to_file": "libs/seo/structured-data.ts",
+      "to_func": "getRootStructuredData"
+    },
+    {
+      "from_file": "webgl/hooks/use-webgl-rect.ts",
+      "from_func": "useWebGLRect",
+      "to_file": "hooks/use-transform.tsx",
+      "to_func": "useTransform"
+    },
+    {
+      "from_file": "webgl/components/raf/index.ts",
+      "from_func": "RAF",
+      "to_file": "webgl/components/raf/index.ts",
+      "to_func": "advance"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getConfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isMailchimpConfigured"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "mergeRefs",
+      "to_file": "libs/utils.ts",
+      "to_func": "cleanup"
+    },
+    {
+      "from_file": "webgl/components/preload/index.ts",
+      "from_func": "Preload",
+      "to_file": "webgl/components/preload/index.ts",
+      "to_func": "load"
+    },
+    {
+      "from_file": "webgl/utils/fluid/index.tsx",
+      "from_func": "handleTouchMove",
+      "to_file": "webgl/utils/fluid/index.tsx",
+      "to_func": "updateMouse"
+    },
+    {
+      "from_file": "app/(pages)/home/_sections/tambo-steps/animation.tsx",
+      "from_func": "Animation",
+      "to_file": "hooks/use-device-detection.ts",
+      "to_func": "useDeviceDetection"
+    },
+    {
+      "from_file": "orchestra/theatre/index.tsx",
+      "from_func": "SheetProvider",
+      "to_file": "orchestra/theatre/index.tsx",
+      "to_func": "useSheet"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "handleEnter"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getUnconfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isTurnstileConfigured"
+    },
+    {
+      "from_file": "libs/fetch-with-timeout.ts",
+      "from_func": "fetchJSON",
+      "to_file": "libs/fetch-with-timeout.ts",
+      "to_func": "fetchWithTimeout"
+    },
+    {
+      "from_file": "components/real-viewport/index.tsx",
+      "from_func": "createOnWindowResize",
+      "to_file": "components/real-viewport/index.tsx",
+      "to_func": "getScrollbarWidth"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useMarker",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "setElementRef"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getUnconfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isSanityConfigured"
+    },
+    {
+      "from_file": "hooks/use-transform.tsx",
+      "from_func": "TransformProvider",
+      "to_file": "hooks/use-transform.tsx",
+      "to_func": "getTransform"
+    },
+    {
+      "from_file": "styles/scripts/generate-scale.ts",
+      "from_func": "generateScale",
+      "to_file": "styles/scripts/generate-scale.ts",
+      "to_func": "columnScaleUtility"
+    },
+    {
+      "from_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "from_func": "useTheatre",
+      "to_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "to_func": "useTheatreObject"
+    },
+    {
+      "from_file": "webgl/utils/fluid/fluid-sim.ts",
+      "from_func": "Fluid.constructor",
+      "to_file": "webgl/utils/fluid/fluid-sim.ts",
+      "to_func": "getDoubleRenderTarget"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getConfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isHubSpotConfigured"
+    },
+    {
+      "from_file": "hooks/use-device-values.ts",
+      "from_func": "useDesktopVW",
+      "to_file": "libs/utils.ts",
+      "to_func": "desktopVW"
+    },
+    {
+      "from_file": "webgl/components/image/webgl.tsx",
+      "from_func": "WebGLImage",
+      "to_file": "webgl/hooks/use-webgl-rect.ts",
+      "to_func": "useWebGLRect"
+    },
+    {
+      "from_file": "libs/get-posts.ts",
+      "from_func": "getPostListItems",
+      "to_file": "libs/get-posts.ts",
+      "to_func": "getPosts"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getConfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isTurnstileConfigured"
+    },
+    {
+      "from_file": "app/(pages)/home/_sections/tambo-steps/animation.tsx",
+      "from_func": "Animation",
+      "to_file": "libs/utils.ts",
+      "to_func": "mapRangeWithSnap"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "handleLeave"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "fromTo",
+      "to_file": "libs/utils.ts",
+      "to_func": "fromPreValue"
+    },
+    {
+      "from_file": "webgl/utils/flowmaps/index.tsx",
+      "from_func": "useFlowmapSim",
+      "to_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "to_func": "useTheatre"
+    },
+    {
+      "from_file": "components/real-viewport/index.tsx",
+      "from_func": "RealViewport",
+      "to_file": "components/real-viewport/index.tsx",
+      "to_func": "createOnWindowResize"
+    },
+    {
+      "from_file": "webgl/hooks/use-webgl-rect.ts",
+      "from_func": "useWebGLRect",
+      "to_file": "webgl/hooks/use-webgl-rect.ts",
+      "to_func": "getTransform"
+    },
+    {
+      "from_file": "libs/discord.ts",
+      "from_func": "getDiscordMembers",
+      "to_file": "libs/discord.ts",
+      "to_func": "formatMemberCount"
+    },
+    {
+      "from_file": "components/animated-gradient/webgl.tsx",
+      "from_func": "WebGLAnimatedGradient",
+      "to_file": "components/animated-gradient/webgl.tsx",
+      "to_func": "useGradient"
+    },
+    {
+      "from_file": "orchestra/theatre/hooks/use-studio.ts",
+      "from_func": "useStudioCurrentObject",
+      "to_file": "orchestra/theatre/hooks/use-studio.ts",
+      "to_func": "useStudio"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getUnconfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isShopifyConfigured"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "libs/spam-protection.ts",
+      "to_func": "isDisposableEmail"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "mapRange",
+      "to_file": "libs/utils.ts",
+      "to_func": "clamp"
+    },
+    {
+      "from_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "from_func": "useTheatre",
+      "to_file": "orchestra/theatre/hooks/use-studio.ts",
+      "to_func": "useStudio"
+    },
+    {
+      "from_file": "components/image/index.tsx",
+      "from_func": "Image",
+      "to_file": "components/image/index.tsx",
+      "to_func": "generateBlurDataURL"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "shortenObjectKeys",
+      "to_file": "libs/utils.ts",
+      "to_func": "convertToCamelCase"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "fromTo",
+      "to_file": "libs/utils.ts",
+      "to_func": "mapRange"
+    },
+    {
+      "from_file": "components/real-viewport/index.tsx",
+      "from_func": "RealViewport",
+      "to_file": "components/real-viewport/index.tsx",
+      "to_func": "onWindowResize"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "update"
+    },
+    {
+      "from_file": "app/(pages)/home/_components/hash-pattern/index.tsx",
+      "from_func": "HashPattern",
+      "to_file": "hooks/use-device-detection.ts",
+      "to_func": "useDeviceDetection"
+    },
+    {
+      "from_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "from_func": "useTheatre",
+      "to_file": "orchestra/theatre/hooks/use-theatre.ts",
+      "to_func": "set"
+    },
+    {
+      "from_file": "libs/discord.ts",
+      "from_func": "getDiscordMembers",
+      "to_file": "libs/discord.ts",
+      "to_func": "isValidDiscordResponse"
+    },
+    {
+      "from_file": "webgl/utils/fluid/fluid-sim.ts",
+      "from_func": "Fluid.constructor",
+      "to_file": "webgl/utils/fluid/fluid-sim.ts",
+      "to_func": "getFullscreenTriangle"
+    },
+    {
+      "from_file": "styles/scripts/generate-scale.ts",
+      "from_func": "generateScale",
+      "to_file": "styles/scripts/generate-scale.ts",
+      "to_func": "scaleUtility"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "libs/utils.ts",
+      "to_func": "clamp"
+    },
+    {
+      "from_file": "app/sitemap.ts",
+      "from_func": "sitemap",
+      "to_file": "libs/get-posts.ts",
+      "to_func": "getPostListItems"
+    },
+    {
+      "from_file": "webgl/components/image/index.tsx",
+      "from_func": "Image",
+      "to_file": "hooks/use-device-detection.ts",
+      "to_func": "useDeviceDetection"
+    },
+    {
+      "from_file": "styles/scripts/generate-tailwind.ts",
+      "from_func": "generateTailwind",
+      "to_file": "styles/scripts/utils.ts",
+      "to_func": "scalingCalc"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "libs/spam-protection.ts",
+      "to_func": "isValidOrigin"
+    },
+    {
+      "from_file": "hooks/use-transform.tsx",
+      "from_func": "useTransform",
+      "to_file": "hooks/use-transform.tsx",
+      "to_func": "removeCallback"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "fromTo",
+      "to_file": "libs/utils.ts",
+      "to_func": "toPreValue"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "stagger",
+      "to_file": "libs/utils.ts",
+      "to_func": "clamp"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getConfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isSanityConfigured"
+    },
+    {
+      "from_file": "components/image/index.tsx",
+      "from_func": "Image",
+      "to_file": "components/image/index.tsx",
+      "to_func": "getFinalPlaceholder"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "libs/rate-limit.ts",
+      "to_func": "checkRateLimit"
+    },
+    {
+      "from_file": "hooks/use-scroll-trigger.ts",
+      "from_func": "useScrollTrigger",
+      "to_file": "hooks/use-scroll-trigger.ts",
+      "to_func": "handleProgress"
+    },
+    {
+      "from_file": "webgl/components/postprocessing/index.ts",
+      "from_func": "PostProcessing",
+      "to_file": "webgl/components/postprocessing/index.ts",
+      "to_func": "setDpr"
+    },
+    {
+      "from_file": "app/api/contact/route.ts",
+      "from_func": "POST",
+      "to_file": "app/api/contact/route.ts",
+      "to_func": "silentReject"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "fromTo",
+      "to_file": "libs/utils.ts",
+      "to_func": "stagger"
+    },
+    {
+      "from_file": "orchestra/theatre/index.tsx",
+      "from_func": "useSheet",
+      "to_file": "orchestra/theatre/index.tsx",
+      "to_func": "useCurrentProject"
+    },
+    {
+      "from_file": "libs/utils.ts",
+      "from_func": "mapRangeWithSnap",
+      "to_file": "libs/utils.ts",
+      "to_func": "clamp"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getUnconfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isMandrillConfigured"
+    },
+    {
+      "from_file": "libs/cleanup-integrations.ts",
+      "from_func": "printCleanupInstructions",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "getUnconfiguredIntegrations"
+    },
+    {
+      "from_file": "components/real-viewport/index.tsx",
+      "from_func": "createOnWindowResize",
+      "to_file": "libs/tempus-queue.ts",
+      "to_func": "mutate"
+    },
+    {
+      "from_file": "webgl/utils/fluid/index.tsx",
+      "from_func": "handleMouseMove",
+      "to_file": "webgl/utils/fluid/index.tsx",
+      "to_func": "updateMouse"
+    },
+    {
+      "from_file": "webgl/hooks/use-webgl-rect.ts",
+      "from_func": "useWebGLRect",
+      "to_file": "webgl/hooks/use-webgl-rect.ts",
+      "to_func": "update"
+    },
+    {
+      "from_file": "components/contact-form/index.tsx",
+      "from_func": "handleSubmit",
+      "to_file": "components/contact-form/index.tsx",
+      "to_func": "validateForm"
+    },
+    {
+      "from_file": "integrations/check-integration.ts",
+      "from_func": "getUnconfiguredIntegrations",
+      "to_file": "integrations/check-integration.ts",
+      "to_func": "isMailchimpConfigured"
+    },
+    {
+      "from_file": "components/image/index.tsx",
+      "from_func": "Image",
+      "to_file": "components/image/index.tsx",
+      "to_func": "shouldUseBlurPlaceholder"
+    },
+    {
+      "from_file": "styles/scripts/generate-root.ts",
+      "from_func": "generateRoot",
+      "to_file": "styles/scripts/utils.ts",
+      "to_func": "scalingCalc"
+    }
+  ],
+  "languages": ["typescript"],
+  "timestamp": 1771417616.580458
+}

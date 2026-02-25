@@ -1,0 +1,114 @@
+.linkWrapper {
+  @media (--hover) {
+    &:hover {
+      .icon {
+        background-color: var(--color-black);
+        color: var(--color-teal);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.icon {
+  transition:
+    background-color 300ms,
+    color 300ms,
+    transform 300ms;
+}
+
+.loginButton {
+  transition:
+    background-color 300ms,
+    color 300ms;
+  @media (--hover) {
+    &:hover {
+      background-color: var(--color-black);
+      color: var(--color-mint);
+    }
+  }
+}
+
+.brandLink {
+  position: relative;
+  color: rgba(232, 232, 232, 0.82);
+  transition: color 300ms ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.brandLogo {
+  opacity: 0.92;
+  transform: translateY(var(--logo-offset, 0%)) scale(var(--logo-scale, 1));
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease,
+    filter 300ms ease;
+}
+
+.brandDock {
+  height: 100%;
+  overflow: hidden;
+}
+
+.brandLogoDesktop {
+  --logo-offset: 36%;
+  --logo-scale: 1;
+}
+
+.brandLink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-130%);
+  opacity: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 65%
+  );
+  transition:
+    transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 260ms ease;
+  pointer-events: none;
+}
+
+@media (--hover) {
+  .brandLink:hover {
+    color: var(--color-mint);
+  }
+
+  .brandLink:hover .brandLogo {
+    opacity: 1;
+    --logo-scale: 1.04;
+    filter: drop-shadow(0 0 10px rgba(32, 184, 205, 0.35));
+  }
+
+  .brandLink:hover::after {
+    transform: translateX(130%);
+    opacity: 1;
+  }
+}
+
+.brandLinkMobile {
+  color: rgba(232, 232, 232, 0.88);
+}
+
+.brandLogoMobile {
+  opacity: 0.95;
+}
+
+.mobileNavContainer {
+  transition: height 300ms ease;
+}
+
+.mobileNavOpened {
+  height: mobile-vw(403px);
+}
+
+.ctaMobile {
+  svg {
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,190 @@
+/* GLOBAL CSS FILE - Contains global styles that shouldn't be reset */
+
+@theme inline {
+  --animate-gradient: gradient 8s linear infinite;
+
+  @keyframes gradient {
+    to {
+      background-position: var(--bg-size, 300%) 0;
+    }
+  }
+}
+
+html {
+  --scrollbar-gutter: 0px;
+  scrollbar-gutter: stable; /* This is needed to prevent the scrollbar from jumping */
+  background-color: var(--color-primary); /* Prevent white flash through rounded section corners on mobile */
+
+  &.lenis-stopped {
+    --scrollbar-gutter: var(--scrollbar-width);
+  }
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+html.overflow-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+
+body {
+  min-height: 100vh;
+  overscroll-behavior: none;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection styling */
+*::selection {
+  background-color: var(--color-contrast);
+  color: var(--color-secondary);
+}
+
+/* SVG icon colors */
+svg.icon {
+  path[fill],
+  rect[fill],
+  circle[fill] {
+    fill: currentColor;
+  }
+  path[stroke],
+  rect[stroke],
+  circle[stroke] {
+    stroke: currentColor;
+  }
+}
+
+/* Hover states */
+.link {
+  @media (--hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--color-contrast);
+}
+
+html.scrollbar-grabbing,
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html.screenshot {
+  *:not(:has(canvas), canvas, :has(#orchestra), #orchestra, #orchestra *) {
+    /* biome-ignore lint: it's all good */
+    opacity: 0 !important;
+  }
+}
+
+.dark-teal-pattern {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(32, 184, 205, 0.2),
+    rgba(32, 184, 205, 0.2) 1px,
+    #0a0a0a 1px,
+    #0a0a0a 6px
+  );
+}
+
+.shadow-xs {
+  box-shadow: 0 0 16px 0px rgba(32, 184, 205, 0.7);
+}
+
+.shadow-s {
+  box-shadow: 0 0 24px desktop-vw(8px) rgba(32, 184, 205, 0.7);
+}
+
+.shadow-m {
+  /* box-shadow: 0 desktop-vw(64px) 56px desktop-vw(48px) rgba(32, 184, 205, 0.25); */
+  box-shadow: 0 desktop-vw(64px) 56px desktop-vw(8px) rgba(32, 184, 205, 0.5);
+}
+
+.fullwidth {
+  width: calc(100vw - var(--scrollbar-width));
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+.fade-mask {
+  @media (--desktop) {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black desktop-vw(50px),
+      black calc(100% - desktop-vw(50px)),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black desktop-vw(50px),
+      black calc(100% - desktop-vw(50px)),
+      transparent 100%
+    );
+  }
+}
+
+.card-outline {
+  outline: 6px solid
+    color-mix(in oklab, var(--color-dark-grey) 50%, transparent);
+}
+
+.dashed-border {
+  border: 1px dashed color-mix(in oklab, var(--color-forest) 50%, transparent);
+}
+
+.content-max-width {
+  @media (--desktop) {
+    margin-inline: auto;
+    max-width: calc(var(--max-width) * 1px);
+  }
+}
+
+.section-shadow-top {
+  box-shadow: 0 -64px 56px 8px rgba(32, 184, 205, 0.25);
+}
+
+.section-shadow-bottom {
+  box-shadow: 0 64px 56px 8px rgba(32, 184, 205, 0.25);
+}
+
+.section-rounded-top {
+  border-top-left-radius: mobile-vw(40px);
+  border-top-right-radius: mobile-vw(40px);
+
+  @media (--desktop) {
+    border-top-left-radius: desktop-vw(60px);
+    border-top-right-radius: desktop-vw(60px);
+  }
+}
+
+.section-rounded-bottom {
+  /* for test */
+  border-bottom-left-radius: mobile-vw(40px);
+  border-bottom-right-radius: mobile-vw(40px);
+
+  @media (--desktop) {
+    border-bottom-left-radius: desktop-vw(60px);
+    border-bottom-right-radius: desktop-vw(60px);
+  }
+}
