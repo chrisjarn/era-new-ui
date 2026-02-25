@@ -1,15 +1,11 @@
 'use client'
 
 import cn from 'clsx'
-import { useIntersectionObserver, useRect } from 'hamo'
-import { useContext } from 'react'
-import { BackgroundContext } from '~/app/(pages)/home/_components/background/context'
+import { useIntersectionObserver } from 'hamo'
 import { TitleBlock } from '~/app/(pages)/home/_components/title-block'
 import CheckSVG from '~/assets/svgs/check.svg'
 import { CTA } from '~/components/button'
-import { useDesktopVW } from '~/hooks/use-device-values'
-import { useScrollTrigger } from '~/hooks/use-scroll-trigger'
-import { mapRange } from '~/libs/utils'
+import { TextEffect } from '~/components/text-effect'
 import { complianceStatement, pricingCards } from './data'
 import s from './section-12.module.css'
 
@@ -33,31 +29,6 @@ export function Pricing({
   complianceStandards,
   complianceStatement: stmtProp,
 }: PricingProps) {
-  const [setRectRef, rect] = useRect()
-
-  const { getSolidBackground } = useContext(BackgroundContext)
-
-  const desktopVW = useDesktopVW()
-
-  useScrollTrigger(
-    {
-      rect,
-      start: 'bottom bottom',
-      end: 'bottom top',
-      onProgress: ({ progress, height }) => {
-        const solidBackground = getSolidBackground()
-        if (solidBackground) {
-          const inset = mapRange(0, 1, progress, 0, desktopVW(40, true))
-          const radius = mapRange(0, 1, progress, 0, desktopVW(20, true))
-
-          solidBackground.style.clipPath = `inset(0 ${inset}px 0px ${inset}px round ${radius}px)`
-
-          solidBackground.style.transform = `translateY(${-height * progress}px)`
-        }
-      },
-    },
-    []
-  )
 
   const displayCards = complianceStandards
     ? complianceStandards.map((s) => ({
@@ -90,7 +61,6 @@ export function Pricing({
     <>
       <section
         className="dt:dr-pt-65 dr-pt-40 dr-pb-40 dt:dr-pb-80 bg-white dt:scroll-mt-220 scroll-mt-80 relative z-1"
-        ref={setRectRef}
         id="compliance"
       >
         <div className="mx-auto dr-layout-grid-inner relative content-max-width">
@@ -114,23 +84,25 @@ export function Pricing({
         </div>
       </section>
 
-      <section className="relative bg-black dr-pt-140 dr-pb-96 dt:dr-pt-300 dt:dr-pb-220 overflow-hidden">
-        <div className="relative content-max-width px-safe dt:px-0">
-          <div className="max-w-5xl mx-auto">
-            {statementParagraphs.map((paragraph, index) => (
-              <p
-                key={`${paragraph.slice(0, 24)}-${index}`}
-                className={cn(
-                  'typo-p dt:typo-p-l text-center text-off-white/80',
-                  index !== statementParagraphs.length - 1 && 'dr-mb-24'
-                )}
+      <div className="content-max-width px-safe dt:px-0 dr-pt-80 dt:dr-pt-140 dr-pb-80 dt:dr-pb-140">
+        <div className="dr-max-w-560 mx-auto w-full">
+          {statementParagraphs.map((paragraph, index) => (
+            <div
+              key={`${paragraph.slice(0, 24)}-${index}`}
+              className={cn(index !== statementParagraphs.length - 1 && 'dr-mb-24')}
+            >
+              <TextEffect
+                as="p"
+                per="word"
+                staggerDuration={0.015}
+                className="typo-p-bold dt:typo-h4 text-center text-off-white/80"
               >
                 {paragraph}
-              </p>
-            ))}
-          </div>
+              </TextEffect>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
     </>
   )
 }

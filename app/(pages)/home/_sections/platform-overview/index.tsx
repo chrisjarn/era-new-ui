@@ -58,7 +58,7 @@ export function PlatformOverview({
     >
       <div className="dr-layout-grid">
         <div className="dt:col-start-1 dt:col-end-5 col-span-full dr-mb-56 dt:dr-mb-0">
-          <TitleBlock className="items-start dt:dr-mb-40 dr-mb-32">
+          <TitleBlock className="items-start dt:dr-mb-40 dr-mb-32 px-0!">
             <TitleBlock.LeadIn className="dr-mb-16 dt:dr-mb-24">
               {resolvedLeadIn}
             </TitleBlock.LeadIn>
@@ -81,7 +81,7 @@ export function PlatformOverview({
           </CTA>
         </div>
 
-        <div className="grid dt:grid-cols-2 grid-cols-1 dt:dr-gap-x-24 dt:dr-gap-y-40 dr-gap-y-24 dt:dr-pt-56 dt:col-start-6 dt:col-end-12 col-span-full dr-px-16 dt:px-0">
+        <div className="grid dt:grid-cols-2 grid-cols-1 dt:dr-gap-x-24 dt:dr-gap-y-40 dr-gap-y-24 dt:dr-pt-56 dt:col-start-6 dt:col-end-12 col-span-full px-0">
           {resolvedCards.map((card) => (
             <Card key={card?.title} data={card} />
           ))}

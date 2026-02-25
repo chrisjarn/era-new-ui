@@ -145,7 +145,7 @@ export function Footer({
       ref={setRectRef}
       className=" relative bg-white dt:bg-transparent dt:h-screen"
     >
-      <div className="dt:absolute dt:bottom-0 dt:left-0 dt:right-0 dt:top-[-100vh]">
+      <div className="dt:absolute dt:bottom-0 dt:left-0 dt:right-0 dt:top-0">
         <div
           className="dt:h-screen dt:sticky dt:top-0 dt:left-0 dt:right-0 max-dt:transform-[unset]! overflow-clip"
           ref={stickyRef}

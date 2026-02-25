@@ -1,25 +1,15 @@
 'use client'
 
-import { type HTMLMotionProps, type MotionProps, motion, useInView } from 'motion/react'
+import { type HTMLMotionProps, motion, useInView } from 'motion/react'
 import { type ReactNode, useRef } from 'react'
 
 type Per = 'word' | 'char'
-type TagName = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'span'
-
-const motionTags = {
-  p: motion.p,
-  h1: motion.h1,
-  h2: motion.h2,
-  h3: motion.h3,
-  h4: motion.h4,
-  span: motion.span,
-} as const
 
 interface TextEffectProps {
   children: string
   per?: Per
   className?: string
-  as?: TagName
+  as?: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'span'
   staggerDuration?: number
   once?: boolean
 }
@@ -32,7 +22,7 @@ const charVariants: HTMLMotionProps<'span'>['variants'] = {
   visible: {
     opacity: 1,
     filter: 'blur(0px) brightness(100%)',
-    transition: { duration: 0.4 },
+    transition: { duration: 0.25 },
   },
 }
 
@@ -40,55 +30,55 @@ export function TextEffect({
   children,
   per = 'char',
   className,
-  as = 'span',
+  as: Tag = 'span',
   staggerDuration = 0.01,
   once = true,
 }: TextEffectProps) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once, amount: 0.3 })
-  const Tag = motionTags[as]
-
-  const containerVariants: MotionProps['variants'] = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: per === 'word' ? staggerDuration * 5 : staggerDuration,
-      },
-    },
-  }
 
   const words = children.split(' ')
 
   return (
-    <Tag
+    <motion.div
       ref={ref}
-      className={className}
-      variants={containerVariants}
+      role="presentation"
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            staggerChildren:
+              per === 'word' ? staggerDuration * 5 : staggerDuration,
+          },
+        },
+      }}
     >
-      {words.map((word, wi) => (
-        <span key={`${word}-${wi}`} className="inline-block whitespace-pre">
-          {per === 'word' ? (
-            <motion.span className="inline-block" variants={charVariants}>
-              {word}
-            </motion.span>
-          ) : (
-            word.split('').map((char, ci) => (
-              <motion.span
-                key={`${char}-${ci}`}
-                className="inline-block"
-                variants={charVariants}
-              >
-                {char}
+      <Tag className={className}>
+        {words.map((word, wi) => (
+          <span key={`${word}-${wi}`} className="inline-block whitespace-pre">
+            {per === 'word' ? (
+              <motion.span className="inline-block" variants={charVariants}>
+                {word}
               </motion.span>
-            ))
-          )}
-          {wi < words.length - 1 ? ' ' : ''}
-        </span>
-      ))}
-    </Tag>
+            ) : (
+              word.split('').map((char, ci) => (
+                <motion.span
+                  key={`${char}-${ci}`}
+                  className="inline-block"
+                  variants={charVariants}
+                >
+                  {char}
+                </motion.span>
+              ))
+            )}
+            {wi < words.length - 1 ? ' ' : ''}
+          </span>
+        ))}
+      </Tag>
+    </motion.div>
   )
 }
 
@@ -103,7 +93,7 @@ export function TextEffectWrapper({
   className,
   once = true,
 }: TextEffectWrapperProps) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once, amount: 0.3 })
 
   return (

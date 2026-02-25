@@ -84,7 +84,7 @@ export function Navigation() {
           </ul>
           <div
             className={cn(
-              'dt:absolute dt:left-1/2 dt:-translate-x-1/2 dt:grid dt:place-items-center',
+              'dt:absolute dt:left-1/2  dt:grid dt:place-items-center',
               s.brandDock
             )}
           >
@@ -95,7 +95,7 @@ export function Navigation() {
             >
               <EraLogo
                 className={cn(
-                  'w-auto dt:dr-h-60 dr-h-24',
+                  'w-auto dt:dr-h-40 dr-h-28',
                   s.brandLogo,
                   s.brandLogoDesktop
                 )}
@@ -144,7 +144,7 @@ export function Navigation() {
               )}
               aria-label="ERA Safety Home"
             >
-              <EraLogo className={cn('w-auto dr-h-24', s.brandLogoMobile)} />
+              <EraLogo className={cn('w-auto dr-h-28', s.brandLogoMobile)} />
             </Link>
             <Button
               onClick={() => {
