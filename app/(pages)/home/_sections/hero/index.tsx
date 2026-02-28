@@ -92,22 +92,26 @@ export function Hero({
                 </p>
               </TextEffectWrapper>
             )}
-            <TextEffect
-              as="h1"
-              className="dt:typo-hero-title typo-hero-mobile text-start dt:block hidden"
-              per="char"
-              staggerDuration={0.02}
-            >
-              {heroTagline ?? 'Location. Capture. Improve. Respond.'}
-            </TextEffect>
-            <TextEffect
-              as="h1"
-              className="typo-hero-mobile text-start text-balance dt:hidden max-w-[320px]"
-              per="char"
-              staggerDuration={0.02}
-            >
-              {heroTaglineMobile ?? heroTagline ?? 'Location. Capture. Improve. Respond.'}
-            </TextEffect>
+            <div className="hidden dt:block w-full">
+              <TextEffect
+                as="h1"
+                className="typo-hero-title text-start"
+                per="char"
+                staggerDuration={0.02}
+              >
+                {heroTagline ?? 'Location. Capture. Improve. Respond.'}
+              </TextEffect>
+            </div>
+            <div className="dt:hidden max-w-[320px]">
+              <TextEffect
+                as="h1"
+                className="typo-hero-mobile text-start text-balance"
+                per="char"
+                staggerDuration={0.02}
+              >
+                {heroTaglineMobile ?? heroTagline ?? 'Location. Capture. Improve. Respond.'}
+              </TextEffect>
+            </div>
             <TextEffectWrapper>
               <p className="typo-p dt:typo-p-l text-off-white/50 text-start max-w-prose">
                 {heroDescription ??
