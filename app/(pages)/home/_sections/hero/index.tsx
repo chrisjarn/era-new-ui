@@ -102,7 +102,7 @@ export function Hero({
             </TextEffect>
             <TextEffect
               as="h1"
-              className="typo-hero-mobile text-start text-balance dt:hidden max-w-[280px]"
+              className="typo-hero-mobile text-start text-balance dt:hidden max-w-[320px]"
               per="char"
               staggerDuration={0.02}
             >
