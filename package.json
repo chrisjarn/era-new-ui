@@ -40,7 +40,7 @@
     "@radix-ui/react-tooltip": "^1.2.8",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.4.2",
-    "@sanity/image-url": "^1.2.0",
+    "@sanity/image-url": "^2.0.3",
     "@sanity/vision": "^4.22.0",
     "@valibot/to-json-schema": "^1.5.0",
     "agentation": "^2.2.1",
