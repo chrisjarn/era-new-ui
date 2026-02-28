@@ -13,7 +13,7 @@ export default function LegalLayout({ children }: LegalLayoutProps) {
   return (
     <Theme theme="dark" global>
       <ScrollToTop />
-      <div className="min-h-dvh flex flex-col bg-white">
+      <div className="min-h-svh flex flex-col bg-white">
         <Wrapper />
         <main className="flex-1 dr-pt-80">
           <div className="dr-layout-grid-inner dr-py-64">

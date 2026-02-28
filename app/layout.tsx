@@ -7,6 +7,7 @@ import AppData from '~/package.json'
 import { AnalyticsProvider } from '~/providers/posthog-provider'
 import { themes } from '~/styles/colors'
 import '~/styles/css/index.css'
+import './globals.css'
 
 import { Agentation } from 'agentation'
 import Script from 'next/script'

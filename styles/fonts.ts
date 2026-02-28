@@ -1,4 +1,13 @@
+import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--next-font-inter',
+  preload: true,
+  adjustFontFallback: true,
+})
 
 const mono = localFont({
   src: [
@@ -103,7 +112,7 @@ const sentient = localFont({
   ],
 })
 
-const fonts = [mono, geist, geistMono, sentient]
+const fonts = [inter, mono, geist, geistMono, sentient]
 const fontsVariable = fonts.map((font) => font.variable).join(' ')
 
 export { fontsVariable }

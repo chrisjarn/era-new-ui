@@ -22,7 +22,7 @@ export default function BlogLayout({ children }: BlogLayoutProps) {
   return (
     <Theme theme="dark" global>
       <ScrollToTop />
-      <div className="min-h-dvh flex flex-col bg-white">
+      <div className="min-h-svh flex flex-col bg-white">
         <Wrapper />
         <main className="flex-1 dr-pt-80">{children}</main>
         <FooterContent />

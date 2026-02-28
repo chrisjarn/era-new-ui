@@ -37,7 +37,7 @@ export function TextEffect({
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once, amount: 0.3 })
 
-  const words = children.split(' ')
+  const lines = children.split('\n')
 
   return (
     <motion.div
@@ -57,26 +57,34 @@ export function TextEffect({
       }}
     >
       <Tag className={className}>
-        {words.map((word, wi) => (
-          <span key={`${word}-${wi}`} className="inline-block whitespace-pre">
-            {per === 'word' ? (
-              <motion.span className="inline-block" variants={charVariants}>
-                {word}
-              </motion.span>
-            ) : (
-              word.split('').map((char, ci) => (
-                <motion.span
-                  key={`${char}-${ci}`}
-                  className="inline-block"
-                  variants={charVariants}
-                >
-                  {char}
-                </motion.span>
-              ))
-            )}
-            {wi < words.length - 1 ? ' ' : ''}
-          </span>
-        ))}
+        {lines.map((line, li) => {
+          const words = line.split(' ')
+          return (
+            <span key={li}>
+              {words.map((word, wi) => (
+                <span key={`${word}-${wi}`} className="inline-block whitespace-pre">
+                  {per === 'word' ? (
+                    <motion.span className="inline-block" variants={charVariants}>
+                      {word}
+                    </motion.span>
+                  ) : (
+                    word.split('').map((char, ci) => (
+                      <motion.span
+                        key={`${char}-${ci}`}
+                        className="inline-block"
+                        variants={charVariants}
+                      >
+                        {char}
+                      </motion.span>
+                    ))
+                  )}
+                  {wi < words.length - 1 ? ' ' : ''}
+                </span>
+              ))}
+              {li < lines.length - 1 && <br />}
+            </span>
+          )
+        })}
       </Tag>
     </motion.div>
   )

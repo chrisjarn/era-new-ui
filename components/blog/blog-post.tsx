@@ -27,7 +27,7 @@ export function BlogPost({
   const date = rawDate ? formatDate(rawDate) : undefined
 
   return (
-    <article className="min-h-dvh dr-layout-grid-inner dr-py-32">
+    <article className="min-h-svh dr-layout-grid-inner dr-py-32">
       <div className="col-span-full dt:col-start-4 dt:col-end-10">
         {/* Back Navigation */}
         <nav className="dr-mb-40">

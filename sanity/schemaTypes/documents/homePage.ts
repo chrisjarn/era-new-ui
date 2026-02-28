@@ -25,7 +25,14 @@ export const homePage = defineType({
     }),
     defineField({
       name: 'heroTagline',
-      title: 'Tagline',
+      title: 'Tagline (Desktop)',
+      type: 'string',
+      group: 'hero',
+    }),
+    defineField({
+      name: 'heroTaglineMobile',
+      title: 'Tagline (Mobile)',
+      description: 'Shorter version shown on mobile devices. Falls back to desktop tagline if empty.',
       type: 'string',
       group: 'hero',
     }),

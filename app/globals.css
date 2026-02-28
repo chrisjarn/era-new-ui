@@ -1,0 +1,58 @@
+/*
+ * shadcn CSS custom properties — ERA Safety dark theme.
+ * These feed the var(--background), var(--foreground), etc.
+ * references in styles/css/shadcn-theme.css.
+ *
+ * Tailwind imports live in styles/css/index.css (single entry point).
+ */
+
+:root {
+    --radius: 0.625rem;
+
+    /* Core surfaces */
+    --background: #141414;
+    --foreground: #f5f5f5;
+
+    /* Primary-foreground (project --color-primary stays #141414) */
+    --primary-foreground: #f5f5f5;
+
+    /* Cards & secondary surfaces */
+    --secondary-foreground: #141414;
+    --card: #282828;
+    --card-foreground: #f5f5f5;
+    --popover: #0a0a0a;
+    --popover-foreground: #f5f5f5;
+
+    /* Muted / subdued */
+    --muted: #1c1c1c;
+    --muted-foreground: #888888;
+
+    /* Accent (teal) */
+    --accent: #1aa3b5;
+    --accent-foreground: #f5f5f5;
+
+    /* Destructive */
+    --destructive: #e30613;
+
+    /* Borders & inputs */
+    --border: rgba(232, 232, 232, 0.12);
+    --input: rgba(232, 232, 232, 0.15);
+    --ring: #0e7a8a;
+
+    /* Charts */
+    --chart-1: #20b8cd;
+    --chart-2: #1aa3b5;
+    --chart-3: #0e7a8a;
+    --chart-4: #00ff88;
+    --chart-5: #7928ca;
+
+    /* Sidebar */
+    --sidebar: #0a0a0a;
+    --sidebar-foreground: #f5f5f5;
+    --sidebar-primary: #20b8cd;
+    --sidebar-primary-foreground: #0a0a0a;
+    --sidebar-accent: #1c1c1c;
+    --sidebar-accent-foreground: #f5f5f5;
+    --sidebar-border: rgba(232, 232, 232, 0.12);
+    --sidebar-ring: #0e7a8a;
+}

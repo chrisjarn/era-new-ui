@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
+import LogoCloud from '~/components/logo-cloud'
 import { sanityFetch } from '~/sanity/lib/live'
 import { HOME_PAGE_FULL_QUERY } from '~/sanity/lib/queries'
 import { Wrapper } from '../_components/wrapper'
@@ -66,10 +67,12 @@ async function HomeContent() {
       <Hero
         heroLeadIn={nu(homePage?.heroLeadIn)}
         heroTagline={nu(homePage?.heroTagline)}
+        heroTaglineMobile={nu(homePage?.heroTaglineMobile)}
         heroDescription={nu(homePage?.heroDescription)}
         heroPrimaryCta={nu(homePage?.heroPrimaryCta)}
         heroSecondaryCta={nu(homePage?.heroSecondaryCta)}
       />
+      <LogoCloud />
       <ProblemTimeline
         title={nu(homePage?.timelineSectionTitle)}
         messages={data?.timelineMessages?.map((m) => ({

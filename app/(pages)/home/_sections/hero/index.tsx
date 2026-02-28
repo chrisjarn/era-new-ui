@@ -14,6 +14,7 @@ import s from './hero.module.css'
 interface HeroProps {
   heroLeadIn?: string
   heroTagline?: string
+  heroTaglineMobile?: string
   heroDescription?: string
   heroPrimaryCta?: { text: string; href: string }
   heroSecondaryCta?: { text: string; href: string }
@@ -22,6 +23,7 @@ interface HeroProps {
 export function Hero({
   heroLeadIn,
   heroTagline,
+  heroTaglineMobile,
   heroDescription,
   heroPrimaryCta,
   heroSecondaryCta,
@@ -80,30 +82,34 @@ export function Hero({
       >
         <div className="flex dt:flex-row flex-col-reverse items-center content-max-width w-full dt:dr-gap-40">
           <div
-            className="dt:dr-w-col-5 flex flex-col dr-gap-16 items-center dt:items-start z-1 px-safe dt:px-0"
+            className="w-full flex flex-col dr-gap-16 items-start z-1 px-4 dt:px-0"
             ref={titleRef}
           >
-            <TextEffectWrapper>
-              <p className="typo-label-s text-off-white/50 tracking-widest uppercase">
-                {heroLeadIn ?? 'Emergency Response Alliance'}
-              </p>
-            </TextEffectWrapper>
-            {typeof (heroTagline ?? 'Location. Capture. Improve. Respond.') === 'string' ? (
-              <TextEffect
-                as="h1"
-                className="dt:typo-hero-title typo-h2 text-center dt:text-start"
-                per="char"
-                staggerDuration={0.02}
-              >
-                {heroTagline ?? 'Location. Capture. Improve. Respond.'}
-              </TextEffect>
-            ) : (
-              <h1 className="dt:typo-hero-title typo-h2 text-center dt:text-start">
-                {heroTagline}
-              </h1>
+            {heroLeadIn && (
+              <TextEffectWrapper>
+                <p className="typo-label-s text-off-white/50 tracking-widest uppercase">
+                  {heroLeadIn}
+                </p>
+              </TextEffectWrapper>
             )}
+            <TextEffect
+              as="h1"
+              className="dt:typo-hero-title typo-hero-mobile text-start dt:block hidden"
+              per="char"
+              staggerDuration={0.02}
+            >
+              {heroTagline ?? 'Location. Capture. Improve. Respond.'}
+            </TextEffect>
+            <TextEffect
+              as="h1"
+              className="typo-hero-mobile text-start text-balance dt:hidden max-w-[280px]"
+              per="char"
+              staggerDuration={0.02}
+            >
+              {heroTaglineMobile ?? heroTagline ?? 'Location. Capture. Improve. Respond.'}
+            </TextEffect>
             <TextEffectWrapper>
-              <p className="typo-p dt:typo-p-l text-off-white/50 text-center dt:text-start max-w-prose">
+              <p className="typo-p dt:typo-p-l text-off-white/50 text-start max-w-prose">
                 {heroDescription ??
                   'From critical incidents to daily operations, ERA orchestrates work across your entire organisation.'}
               </p>
@@ -123,12 +129,7 @@ export function Hero({
               </CTA>
             </div>
           </div>
-          <div className="dt:dr-w-col-6 relative dt:dr-ml-col-1 flex items-center justify-center dr-pb-24 dt:dr-pb-0">
-            {/* Animation placeholder */}
-            <div className="w-full aspect-square max-w-[280px] dt:max-w-none dt:aspect-[4/3] dr-rounded-20 border border-dashed border-dark-grey/30 bg-dark-grey/5 flex items-center justify-center">
-              <span className="typo-label-s text-off-white/15 uppercase tracking-widest">3D Visual</span>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

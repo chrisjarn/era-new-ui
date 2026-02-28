@@ -14,327 +14,317 @@
 
 // Source: schema.json
 export type TimelineMessage = {
-  _id: string
-  _type: 'timelineMessage'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  messageId: Slug
-  tag: 'reality' | 'solution'
-  message: string
-  videoDescription?: string
-  video?: VideoAsset
-  order?: number
-}
+  _id: string;
+  _type: 'timelineMessage';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  messageId: Slug;
+  tag: 'reality' | 'solution';
+  message: string;
+  videoDescription?: string;
+  video?: VideoAsset;
+  order?: number;
+};
+
+export type SanityImageAssetReference = {
+  _ref: string;
+  _type: 'reference';
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+};
 
 export type VideoAsset = {
-  _type: 'videoAsset'
-  mp4?: string
-  webm?: string
+  _type: 'videoAsset';
+  mp4?: string;
+  webm?: string;
   poster?: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
-    media?: unknown
-    hotspot?: SanityImageHotspot
-    crop?: SanityImageCrop
-    _type: 'image'
-  }
-}
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: 'image';
+  };
+};
 
 export type Slug = {
-  _type: 'slug'
-  current: string
-  source?: string
-}
+  _type: 'slug';
+  current: string;
+  source?: string;
+};
 
 export type Stat = {
-  _id: string
-  _type: 'stat'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  value: string
-  label: string
-  order?: number
-}
+  _id: string;
+  _type: 'stat';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  value: string;
+  label: string;
+  order?: number;
+};
 
 export type Testimonial = {
-  _id: string
-  _type: 'testimonial'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  quote: string
-  author: string
-  position?: string
+  _id: string;
+  _type: 'testimonial';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  quote: string;
+  author: string;
+  position?: string;
   companyLogo?: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
-    media?: unknown
-    hotspot?: SanityImageHotspot
-    crop?: SanityImageCrop
-    _type: 'image'
-  }
-  order?: number
-}
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: 'image';
+  };
+  order?: number;
+};
 
 export type SanityImageCrop = {
-  _type: 'sanity.imageCrop'
-  top: number
-  bottom: number
-  left: number
-  right: number
-}
+  _type: 'sanity.imageCrop';
+  top: number;
+  bottom: number;
+  left: number;
+  right: number;
+};
 
 export type SanityImageHotspot = {
-  _type: 'sanity.imageHotspot'
-  x: number
-  y: number
-  height: number
-  width: number
-}
+  _type: 'sanity.imageHotspot';
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+};
 
 export type ComplianceStandard = {
-  _id: string
-  _type: 'complianceStandard'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  standardName: string
-  description?: string
-  cta?: CtaLink
-  features?: string[]
-  order?: number
-}
+  _id: string;
+  _type: 'complianceStandard';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  standardName: string;
+  description?: string;
+  cta?: CtaLink;
+  features?: Array<string>;
+  order?: number;
+};
 
 export type CtaLink = {
-  _type: 'ctaLink'
-  text: string
-  href: string
-}
+  _type: 'ctaLink';
+  text: string;
+  href: string;
+};
 
 export type Sector = {
-  _id: string
-  _type: 'sector'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  title: string
-  description: string
+  _id: string;
+  _type: 'sector';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title: string;
+  description: string;
   icon?: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
-    media?: unknown
-    hotspot?: SanityImageHotspot
-    crop?: SanityImageCrop
-    _type: 'image'
-  }
-  order?: number
-}
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: 'image';
+  };
+  order?: number;
+};
 
 export type PlatformPhase = {
-  _id: string
-  _type: 'platformPhase'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  title: string
-  description: string
-  video?: VideoAsset
-  order?: number
-}
+  _id: string;
+  _type: 'platformPhase';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title: string;
+  description: string;
+  video?: VideoAsset;
+  order?: number;
+};
 
 export type HomePage = {
-  _id: string
-  _type: 'homePage'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  heroLeadIn?: string
-  heroTagline?: string
-  heroDescription?: string
-  heroPrimaryCta?: CtaLink
-  heroSecondaryCta?: CtaLink
-  timelineSectionTitle?: string
-  platformSectionLeadIn?: string
-  platformSectionTitle?: string
-  platformSectionSubtitle?: string
-  platformSectionCta?: CtaLink
-  socialProofSectionTitle?: string
-  statsSectionLeadIn?: string
-  statsSectionTitle?: string
-  statsSectionSubtitle?: string
-  statsSectionCta?: CtaLink
-  featuresSectionLeadIn?: string
-  featuresSectionTitle?: string
-  featuresSectionCta?: CtaLink
-  industriesSectionLeadIn?: string
-  industriesSectionTitle?: string
-  industriesSectionSubtitle?: string
-  industriesSectionCta?: CtaLink
-  complianceSectionLeadIn?: string
-  complianceSectionTitle?: string
-  complianceSectionSubtitle?: string
-  complianceStatement?: string
-  footerCtaTitle?: string
-  footerCtaDescription?: string
-  footerCtaCta?: CtaLink
-}
+  _id: string;
+  _type: 'homePage';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  heroLeadIn?: string;
+  heroTagline?: string;
+  heroTaglineMobile?: string;
+  heroDescription?: string;
+  heroPrimaryCta?: CtaLink;
+  heroSecondaryCta?: CtaLink;
+  timelineSectionTitle?: string;
+  platformSectionLeadIn?: string;
+  platformSectionTitle?: string;
+  platformSectionSubtitle?: string;
+  platformSectionCta?: CtaLink;
+  socialProofSectionTitle?: string;
+  statsSectionLeadIn?: string;
+  statsSectionTitle?: string;
+  statsSectionSubtitle?: string;
+  statsSectionCta?: CtaLink;
+  featuresSectionLeadIn?: string;
+  featuresSectionTitle?: string;
+  featuresSectionCta?: CtaLink;
+  industriesSectionLeadIn?: string;
+  industriesSectionTitle?: string;
+  industriesSectionSubtitle?: string;
+  industriesSectionCta?: CtaLink;
+  complianceSectionLeadIn?: string;
+  complianceSectionTitle?: string;
+  complianceSectionSubtitle?: string;
+  complianceStatement?: string;
+  footerCtaTitle?: string;
+  footerCtaDescription?: string;
+  footerCtaCta?: CtaLink;
+};
 
 export type SiteConfig = {
-  _id: string
-  _type: 'siteConfig'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  siteName: string
-  siteDescription: string
-  siteUrl: string
-  contactEmail?: string
-  tagline?: string
-  keywords?: string[]
+  _id: string;
+  _type: 'siteConfig';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  siteName: string;
+  siteDescription: string;
+  siteUrl: string;
+  contactEmail?: string;
+  tagline?: string;
+  keywords?: Array<string>;
   ogImage?: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
-    media?: unknown
-    hotspot?: SanityImageHotspot
-    crop?: SanityImageCrop
-    _type: 'image'
-  }
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: 'image';
+  };
   footerLinks?: Array<
     {
-      _key: string
+      _key: string;
     } & NavLink
-  >
+  >;
   socialLinks?: Array<{
-    platform?: string
-    url?: string
-    _key: string
-  }>
-  copyrightHolder?: string
-}
+    platform?: string;
+    url?: string;
+    _key: string;
+  }>;
+  copyrightHolder?: string;
+};
 
 export type NavLink = {
-  _type: 'navLink'
-  label?: string
-  href?: string
-  external?: boolean
-}
+  _type: 'navLink';
+  label?: string;
+  href?: string;
+  external?: boolean;
+};
 
 export type SanityImagePaletteSwatch = {
-  _type: 'sanity.imagePaletteSwatch'
-  background?: string
-  foreground?: string
-  population?: number
-  title?: string
-}
+  _type: 'sanity.imagePaletteSwatch';
+  background?: string;
+  foreground?: string;
+  population?: number;
+  title?: string;
+};
 
 export type SanityImagePalette = {
-  _type: 'sanity.imagePalette'
-  darkMuted?: SanityImagePaletteSwatch
-  lightVibrant?: SanityImagePaletteSwatch
-  darkVibrant?: SanityImagePaletteSwatch
-  vibrant?: SanityImagePaletteSwatch
-  dominant?: SanityImagePaletteSwatch
-  lightMuted?: SanityImagePaletteSwatch
-  muted?: SanityImagePaletteSwatch
-}
+  _type: 'sanity.imagePalette';
+  darkMuted?: SanityImagePaletteSwatch;
+  lightVibrant?: SanityImagePaletteSwatch;
+  darkVibrant?: SanityImagePaletteSwatch;
+  vibrant?: SanityImagePaletteSwatch;
+  dominant?: SanityImagePaletteSwatch;
+  lightMuted?: SanityImagePaletteSwatch;
+  muted?: SanityImagePaletteSwatch;
+};
 
 export type SanityImageDimensions = {
-  _type: 'sanity.imageDimensions'
-  height: number
-  width: number
-  aspectRatio: number
-}
+  _type: 'sanity.imageDimensions';
+  height: number;
+  width: number;
+  aspectRatio: number;
+};
 
 export type SanityImageMetadata = {
-  _type: 'sanity.imageMetadata'
-  location?: Geopoint
-  dimensions?: SanityImageDimensions
-  palette?: SanityImagePalette
-  lqip?: string
-  blurHash?: string
-  hasAlpha?: boolean
-  isOpaque?: boolean
-}
+  _type: 'sanity.imageMetadata';
+  location?: Geopoint;
+  dimensions?: SanityImageDimensions;
+  palette?: SanityImagePalette;
+  lqip?: string;
+  blurHash?: string;
+  thumbHash?: string;
+  hasAlpha?: boolean;
+  isOpaque?: boolean;
+};
 
 export type SanityFileAsset = {
-  _id: string
-  _type: 'sanity.fileAsset'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  originalFilename?: string
-  label?: string
-  title?: string
-  description?: string
-  altText?: string
-  sha1hash?: string
-  extension?: string
-  mimeType?: string
-  size?: number
-  assetId?: string
-  uploadId?: string
-  path?: string
-  url?: string
-  source?: SanityAssetSourceData
-}
+  _id: string;
+  _type: 'sanity.fileAsset';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  originalFilename?: string;
+  label?: string;
+  title?: string;
+  description?: string;
+  altText?: string;
+  sha1hash?: string;
+  extension?: string;
+  mimeType?: string;
+  size?: number;
+  assetId?: string;
+  uploadId?: string;
+  path?: string;
+  url?: string;
+  source?: SanityAssetSourceData;
+};
 
 export type SanityAssetSourceData = {
-  _type: 'sanity.assetSourceData'
-  name?: string
-  id?: string
-  url?: string
-}
+  _type: 'sanity.assetSourceData';
+  name?: string;
+  id?: string;
+  url?: string;
+};
 
 export type SanityImageAsset = {
-  _id: string
-  _type: 'sanity.imageAsset'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  originalFilename?: string
-  label?: string
-  title?: string
-  description?: string
-  altText?: string
-  sha1hash?: string
-  extension?: string
-  mimeType?: string
-  size?: number
-  assetId?: string
-  uploadId?: string
-  path?: string
-  url?: string
-  metadata?: SanityImageMetadata
-  source?: SanityAssetSourceData
-}
+  _id: string;
+  _type: 'sanity.imageAsset';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  originalFilename?: string;
+  label?: string;
+  title?: string;
+  description?: string;
+  altText?: string;
+  sha1hash?: string;
+  extension?: string;
+  mimeType?: string;
+  size?: number;
+  assetId?: string;
+  uploadId?: string;
+  path?: string;
+  url?: string;
+  metadata?: SanityImageMetadata;
+  source?: SanityAssetSourceData;
+};
 
 export type Geopoint = {
-  _type: 'geopoint'
-  lat?: number
-  lng?: number
-  alt?: number
-}
+  _type: 'geopoint';
+  lat?: number;
+  lng?: number;
+  alt?: number;
+};
 
 export type AllSanitySchemaTypes =
   | TimelineMessage
+  | SanityImageAssetReference
   | VideoAsset
   | Slug
   | Stat
@@ -355,357 +345,332 @@ export type AllSanitySchemaTypes =
   | SanityFileAsset
   | SanityAssetSourceData
   | SanityImageAsset
-  | Geopoint
-export declare const internalGroqTypeReferenceTo: unique symbol
-// Source: ./sanity/lib/queries.ts
+  | Geopoint;
+
+export declare const internalGroqTypeReferenceTo: unique symbol;
+
+// Source: sanity/lib/queries.ts
 // Variable: SITE_CONFIG_QUERY
 // Query: *[_type == "siteConfig"][0]{    siteName,    siteDescription,    siteUrl,    contactEmail,    tagline,    keywords,    ogImage,    footerLinks[]{      label,      href,      external    },    socialLinks[]{      platform,      url    },    copyrightHolder  }
-export type SITE_CONFIG_QUERYResult = {
-  siteName: string
-  siteDescription: string
-  siteUrl: string
-  contactEmail: string | null
-  tagline: string | null
-  keywords: string[] | null
+export type SITE_CONFIG_QUERY_RESULT = {
+  siteName: string;
+  siteDescription: string;
+  siteUrl: string;
+  contactEmail: string | null;
+  tagline: string | null;
+  keywords: Array<string> | null;
   ogImage: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
-    media?: unknown
-    hotspot?: SanityImageHotspot
-    crop?: SanityImageCrop
-    _type: 'image'
-  } | null
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: 'image';
+  } | null;
   footerLinks: Array<{
-    label: string | null
-    href: string | null
-    external: boolean | null
-  }> | null
+    label: string | null;
+    href: string | null;
+    external: boolean | null;
+  }> | null;
   socialLinks: Array<{
-    platform: string | null
-    url: string | null
-  }> | null
-  copyrightHolder: string | null
-} | null
+    platform: string | null;
+    url: string | null;
+  }> | null;
+  copyrightHolder: string | null;
+} | null;
+
+// Source: sanity/lib/queries.ts
 // Variable: HOME_PAGE_QUERY
 // Query: *[_type == "homePage"][0]
-export type HOME_PAGE_QUERYResult = {
-  _id: string
-  _type: 'homePage'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  heroLeadIn?: string
-  heroTagline?: string
-  heroDescription?: string
-  heroPrimaryCta?: CtaLink
-  heroSecondaryCta?: CtaLink
-  timelineSectionTitle?: string
-  platformSectionLeadIn?: string
-  platformSectionTitle?: string
-  platformSectionSubtitle?: string
-  platformSectionCta?: CtaLink
-  socialProofSectionTitle?: string
-  statsSectionLeadIn?: string
-  statsSectionTitle?: string
-  statsSectionSubtitle?: string
-  statsSectionCta?: CtaLink
-  featuresSectionLeadIn?: string
-  featuresSectionTitle?: string
-  featuresSectionCta?: CtaLink
-  industriesSectionLeadIn?: string
-  industriesSectionTitle?: string
-  industriesSectionSubtitle?: string
-  industriesSectionCta?: CtaLink
-  complianceSectionLeadIn?: string
-  complianceSectionTitle?: string
-  complianceSectionSubtitle?: string
-  complianceStatement?: string
-  footerCtaTitle?: string
-  footerCtaDescription?: string
-  footerCtaCta?: CtaLink
-} | null
+export type HOME_PAGE_QUERY_RESULT = {
+  _id: string;
+  _type: 'homePage';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  heroLeadIn?: string;
+  heroTagline?: string;
+  heroTaglineMobile?: string;
+  heroDescription?: string;
+  heroPrimaryCta?: CtaLink;
+  heroSecondaryCta?: CtaLink;
+  timelineSectionTitle?: string;
+  platformSectionLeadIn?: string;
+  platformSectionTitle?: string;
+  platformSectionSubtitle?: string;
+  platformSectionCta?: CtaLink;
+  socialProofSectionTitle?: string;
+  statsSectionLeadIn?: string;
+  statsSectionTitle?: string;
+  statsSectionSubtitle?: string;
+  statsSectionCta?: CtaLink;
+  featuresSectionLeadIn?: string;
+  featuresSectionTitle?: string;
+  featuresSectionCta?: CtaLink;
+  industriesSectionLeadIn?: string;
+  industriesSectionTitle?: string;
+  industriesSectionSubtitle?: string;
+  industriesSectionCta?: CtaLink;
+  complianceSectionLeadIn?: string;
+  complianceSectionTitle?: string;
+  complianceSectionSubtitle?: string;
+  complianceStatement?: string;
+  footerCtaTitle?: string;
+  footerCtaDescription?: string;
+  footerCtaCta?: CtaLink;
+} | null;
+
+// Source: sanity/lib/queries.ts
 // Variable: PLATFORM_PHASES_QUERY
 // Query: *[_type == "platformPhase"] | order(order asc){    _id,    title,    description,    video{      mp4,      webm,      poster    },    order  }
-export type PLATFORM_PHASES_QUERYResult = Array<{
-  _id: string
-  title: string
-  description: string
+export type PLATFORM_PHASES_QUERY_RESULT = Array<{
+  _id: string;
+  title: string;
+  description: string;
   video: {
-    mp4: string | null
-    webm: string | null
+    mp4: string | null;
+    webm: string | null;
     poster: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      media?: unknown
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
-    } | null
-  } | null
-  order: number | null
-}>
+      asset?: SanityImageAssetReference;
+      media?: unknown;
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: 'image';
+    } | null;
+  } | null;
+  order: number | null;
+}>;
+
+// Source: sanity/lib/queries.ts
 // Variable: SECTORS_QUERY
 // Query: *[_type == "sector"] | order(order asc){    _id,    title,    description,    icon,    order  }
-export type SECTORS_QUERYResult = Array<{
-  _id: string
-  title: string
-  description: string
+export type SECTORS_QUERY_RESULT = Array<{
+  _id: string;
+  title: string;
+  description: string;
   icon: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
-    media?: unknown
-    hotspot?: SanityImageHotspot
-    crop?: SanityImageCrop
-    _type: 'image'
-  } | null
-  order: number | null
-}>
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: 'image';
+  } | null;
+  order: number | null;
+}>;
+
+// Source: sanity/lib/queries.ts
 // Variable: COMPLIANCE_STANDARDS_QUERY
 // Query: *[_type == "complianceStandard"] | order(order asc){    _id,    standardName,    description,    cta{      text,      href    },    features,    order  }
-export type COMPLIANCE_STANDARDS_QUERYResult = Array<{
-  _id: string
-  standardName: string
-  description: string | null
+export type COMPLIANCE_STANDARDS_QUERY_RESULT = Array<{
+  _id: string;
+  standardName: string;
+  description: string | null;
   cta: {
-    text: string
-    href: string
-  } | null
-  features: string[] | null
-  order: number | null
-}>
+    text: string;
+    href: string;
+  } | null;
+  features: Array<string> | null;
+  order: number | null;
+}>;
+
+// Source: sanity/lib/queries.ts
 // Variable: TESTIMONIALS_QUERY
 // Query: *[_type == "testimonial"] | order(order asc){    _id,    quote,    author,    position,    companyLogo,    order  }
-export type TESTIMONIALS_QUERYResult = Array<{
-  _id: string
-  quote: string
-  author: string
-  position: string | null
+export type TESTIMONIALS_QUERY_RESULT = Array<{
+  _id: string;
+  quote: string;
+  author: string;
+  position: string | null;
   companyLogo: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
-    media?: unknown
-    hotspot?: SanityImageHotspot
-    crop?: SanityImageCrop
-    _type: 'image'
-  } | null
-  order: number | null
-}>
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: 'image';
+  } | null;
+  order: number | null;
+}>;
+
+// Source: sanity/lib/queries.ts
 // Variable: STATS_QUERY
 // Query: *[_type == "stat"] | order(order asc){    _id,    value,    label,    order  }
-export type STATS_QUERYResult = Array<{
-  _id: string
-  value: string
-  label: string
-  order: number | null
-}>
+export type STATS_QUERY_RESULT = Array<{
+  _id: string;
+  value: string;
+  label: string;
+  order: number | null;
+}>;
+
+// Source: sanity/lib/queries.ts
 // Variable: TIMELINE_MESSAGES_QUERY
 // Query: *[_type == "timelineMessage"] | order(order asc){    _id,    messageId,    tag,    message,    videoDescription,    video{      mp4,      webm,      poster    },    order  }
-export type TIMELINE_MESSAGES_QUERYResult = Array<{
-  _id: string
-  messageId: Slug
-  tag: 'reality' | 'solution'
-  message: string
-  videoDescription: string | null
+export type TIMELINE_MESSAGES_QUERY_RESULT = Array<{
+  _id: string;
+  messageId: Slug;
+  tag: 'reality' | 'solution';
+  message: string;
+  videoDescription: string | null;
   video: {
-    mp4: string | null
-    webm: string | null
+    mp4: string | null;
+    webm: string | null;
     poster: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      media?: unknown
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
-    } | null
-  } | null
-  order: number | null
-}>
+      asset?: SanityImageAssetReference;
+      media?: unknown;
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: 'image';
+    } | null;
+  } | null;
+  order: number | null;
+}>;
+
+// Source: sanity/lib/queries.ts
 // Variable: HOME_PAGE_FULL_QUERY
 // Query: {    "siteConfig": *[_type == "siteConfig"][0]{      siteName,      siteDescription,      siteUrl,      contactEmail,      tagline,      footerLinks[]{        label,        href,        external      },      copyrightHolder    },    "homePage": *[_type == "homePage"][0],    "phases": *[_type == "platformPhase"] | order(order asc){      _id,      title,      description,      video{        mp4,        webm,        poster      },      order    },    "sectors": *[_type == "sector"] | order(order asc){      _id,      title,      description,      icon,      order    },    "complianceStandards": *[_type == "complianceStandard"] | order(order asc){      _id,      standardName,      description,      cta{        text,        href      },      features,      order    },    "testimonials": *[_type == "testimonial"] | order(order asc){      _id,      quote,      author,      position,      companyLogo,      order    },    "stats": *[_type == "stat"] | order(order asc){      _id,      value,      label,      order    },    "timelineMessages": *[_type == "timelineMessage"] | order(order asc){      _id,      messageId,      tag,      message,      videoDescription,      video{        mp4,        webm,        poster      },      order    }  }
-export type HOME_PAGE_FULL_QUERYResult = {
+export type HOME_PAGE_FULL_QUERY_RESULT = {
   siteConfig: {
-    siteName: string
-    siteDescription: string
-    siteUrl: string
-    contactEmail: string | null
-    tagline: string | null
+    siteName: string;
+    siteDescription: string;
+    siteUrl: string;
+    contactEmail: string | null;
+    tagline: string | null;
     footerLinks: Array<{
-      label: string | null
-      href: string | null
-      external: boolean | null
-    }> | null
-    copyrightHolder: string | null
-  } | null
+      label: string | null;
+      href: string | null;
+      external: boolean | null;
+    }> | null;
+    copyrightHolder: string | null;
+  } | null;
   homePage: {
-    _id: string
-    _type: 'homePage'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    heroLeadIn?: string
-    heroTagline?: string
-    heroDescription?: string
-    heroPrimaryCta?: CtaLink
-    heroSecondaryCta?: CtaLink
-    timelineSectionTitle?: string
-    platformSectionLeadIn?: string
-    platformSectionTitle?: string
-    platformSectionSubtitle?: string
-    platformSectionCta?: CtaLink
-    socialProofSectionTitle?: string
-    statsSectionLeadIn?: string
-    statsSectionTitle?: string
-    statsSectionSubtitle?: string
-    statsSectionCta?: CtaLink
-    featuresSectionLeadIn?: string
-    featuresSectionTitle?: string
-    featuresSectionCta?: CtaLink
-    industriesSectionLeadIn?: string
-    industriesSectionTitle?: string
-    industriesSectionSubtitle?: string
-    industriesSectionCta?: CtaLink
-    complianceSectionLeadIn?: string
-    complianceSectionTitle?: string
-    complianceSectionSubtitle?: string
-    complianceStatement?: string
-    footerCtaTitle?: string
-    footerCtaDescription?: string
-    footerCtaCta?: CtaLink
-  } | null
+    _id: string;
+    _type: 'homePage';
+    _createdAt: string;
+    _updatedAt: string;
+    _rev: string;
+    heroLeadIn?: string;
+    heroTagline?: string;
+    heroTaglineMobile?: string;
+    heroDescription?: string;
+    heroPrimaryCta?: CtaLink;
+    heroSecondaryCta?: CtaLink;
+    timelineSectionTitle?: string;
+    platformSectionLeadIn?: string;
+    platformSectionTitle?: string;
+    platformSectionSubtitle?: string;
+    platformSectionCta?: CtaLink;
+    socialProofSectionTitle?: string;
+    statsSectionLeadIn?: string;
+    statsSectionTitle?: string;
+    statsSectionSubtitle?: string;
+    statsSectionCta?: CtaLink;
+    featuresSectionLeadIn?: string;
+    featuresSectionTitle?: string;
+    featuresSectionCta?: CtaLink;
+    industriesSectionLeadIn?: string;
+    industriesSectionTitle?: string;
+    industriesSectionSubtitle?: string;
+    industriesSectionCta?: CtaLink;
+    complianceSectionLeadIn?: string;
+    complianceSectionTitle?: string;
+    complianceSectionSubtitle?: string;
+    complianceStatement?: string;
+    footerCtaTitle?: string;
+    footerCtaDescription?: string;
+    footerCtaCta?: CtaLink;
+  } | null;
   phases: Array<{
-    _id: string
-    title: string
-    description: string
+    _id: string;
+    title: string;
+    description: string;
     video: {
-      mp4: string | null
-      webm: string | null
+      mp4: string | null;
+      webm: string | null;
       poster: {
-        asset?: {
-          _ref: string
-          _type: 'reference'
-          _weak?: boolean
-          [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-        }
-        media?: unknown
-        hotspot?: SanityImageHotspot
-        crop?: SanityImageCrop
-        _type: 'image'
-      } | null
-    } | null
-    order: number | null
-  }>
+        asset?: SanityImageAssetReference;
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: 'image';
+      } | null;
+    } | null;
+    order: number | null;
+  }>;
   sectors: Array<{
-    _id: string
-    title: string
-    description: string
+    _id: string;
+    title: string;
+    description: string;
     icon: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      media?: unknown
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
-    } | null
-    order: number | null
-  }>
+      asset?: SanityImageAssetReference;
+      media?: unknown;
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: 'image';
+    } | null;
+    order: number | null;
+  }>;
   complianceStandards: Array<{
-    _id: string
-    standardName: string
-    description: string | null
+    _id: string;
+    standardName: string;
+    description: string | null;
     cta: {
-      text: string
-      href: string
-    } | null
-    features: string[] | null
-    order: number | null
-  }>
+      text: string;
+      href: string;
+    } | null;
+    features: Array<string> | null;
+    order: number | null;
+  }>;
   testimonials: Array<{
-    _id: string
-    quote: string
-    author: string
-    position: string | null
+    _id: string;
+    quote: string;
+    author: string;
+    position: string | null;
     companyLogo: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      media?: unknown
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
-    } | null
-    order: number | null
-  }>
+      asset?: SanityImageAssetReference;
+      media?: unknown;
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: 'image';
+    } | null;
+    order: number | null;
+  }>;
   stats: Array<{
-    _id: string
-    value: string
-    label: string
-    order: number | null
-  }>
+    _id: string;
+    value: string;
+    label: string;
+    order: number | null;
+  }>;
   timelineMessages: Array<{
-    _id: string
-    messageId: Slug
-    tag: 'reality' | 'solution'
-    message: string
-    videoDescription: string | null
+    _id: string;
+    messageId: Slug;
+    tag: 'reality' | 'solution';
+    message: string;
+    videoDescription: string | null;
     video: {
-      mp4: string | null
-      webm: string | null
+      mp4: string | null;
+      webm: string | null;
       poster: {
-        asset?: {
-          _ref: string
-          _type: 'reference'
-          _weak?: boolean
-          [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-        }
-        media?: unknown
-        hotspot?: SanityImageHotspot
-        crop?: SanityImageCrop
-        _type: 'image'
-      } | null
-    } | null
-    order: number | null
-  }>
-}
+        asset?: SanityImageAssetReference;
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: 'image';
+      } | null;
+    } | null;
+    order: number | null;
+  }>;
+};
 
 // Query TypeMap
-import '@sanity/client'
+import '@sanity/client';
 declare module '@sanity/client' {
   interface SanityQueries {
-    '*[_type == "siteConfig"][0]{\n    siteName,\n    siteDescription,\n    siteUrl,\n    contactEmail,\n    tagline,\n    keywords,\n    ogImage,\n    footerLinks[]{\n      label,\n      href,\n      external\n    },\n    socialLinks[]{\n      platform,\n      url\n    },\n    copyrightHolder\n  }': SITE_CONFIG_QUERYResult
-    '*[_type == "homePage"][0]': HOME_PAGE_QUERYResult
-    '*[_type == "platformPhase"] | order(order asc){\n    _id,\n    title,\n    description,\n    video{\n      mp4,\n      webm,\n      poster\n    },\n    order\n  }': PLATFORM_PHASES_QUERYResult
-    '*[_type == "sector"] | order(order asc){\n    _id,\n    title,\n    description,\n    icon,\n    order\n  }': SECTORS_QUERYResult
-    '*[_type == "complianceStandard"] | order(order asc){\n    _id,\n    standardName,\n    description,\n    cta{\n      text,\n      href\n    },\n    features,\n    order\n  }': COMPLIANCE_STANDARDS_QUERYResult
-    '*[_type == "testimonial"] | order(order asc){\n    _id,\n    quote,\n    author,\n    position,\n    companyLogo,\n    order\n  }': TESTIMONIALS_QUERYResult
-    '*[_type == "stat"] | order(order asc){\n    _id,\n    value,\n    label,\n    order\n  }': STATS_QUERYResult
-    '*[_type == "timelineMessage"] | order(order asc){\n    _id,\n    messageId,\n    tag,\n    message,\n    videoDescription,\n    video{\n      mp4,\n      webm,\n      poster\n    },\n    order\n  }': TIMELINE_MESSAGES_QUERYResult
-    '{\n    "siteConfig": *[_type == "siteConfig"][0]{\n      siteName,\n      siteDescription,\n      siteUrl,\n      contactEmail,\n      tagline,\n      footerLinks[]{\n        label,\n        href,\n        external\n      },\n      copyrightHolder\n    },\n    "homePage": *[_type == "homePage"][0],\n    "phases": *[_type == "platformPhase"] | order(order asc){\n      _id,\n      title,\n      description,\n      video{\n        mp4,\n        webm,\n        poster\n      },\n      order\n    },\n    "sectors": *[_type == "sector"] | order(order asc){\n      _id,\n      title,\n      description,\n      icon,\n      order\n    },\n    "complianceStandards": *[_type == "complianceStandard"] | order(order asc){\n      _id,\n      standardName,\n      description,\n      cta{\n        text,\n        href\n      },\n      features,\n      order\n    },\n    "testimonials": *[_type == "testimonial"] | order(order asc){\n      _id,\n      quote,\n      author,\n      position,\n      companyLogo,\n      order\n    },\n    "stats": *[_type == "stat"] | order(order asc){\n      _id,\n      value,\n      label,\n      order\n    },\n    "timelineMessages": *[_type == "timelineMessage"] | order(order asc){\n      _id,\n      messageId,\n      tag,\n      message,\n      videoDescription,\n      video{\n        mp4,\n        webm,\n        poster\n      },\n      order\n    }\n  }': HOME_PAGE_FULL_QUERYResult
+    '*[_type == "siteConfig"][0]{\n    siteName,\n    siteDescription,\n    siteUrl,\n    contactEmail,\n    tagline,\n    keywords,\n    ogImage,\n    footerLinks[]{\n      label,\n      href,\n      external\n    },\n    socialLinks[]{\n      platform,\n      url\n    },\n    copyrightHolder\n  }': SITE_CONFIG_QUERY_RESULT;
+    '*[_type == "homePage"][0]': HOME_PAGE_QUERY_RESULT;
+    '*[_type == "platformPhase"] | order(order asc){\n    _id,\n    title,\n    description,\n    video{\n      mp4,\n      webm,\n      poster\n    },\n    order\n  }': PLATFORM_PHASES_QUERY_RESULT;
+    '*[_type == "sector"] | order(order asc){\n    _id,\n    title,\n    description,\n    icon,\n    order\n  }': SECTORS_QUERY_RESULT;
+    '*[_type == "complianceStandard"] | order(order asc){\n    _id,\n    standardName,\n    description,\n    cta{\n      text,\n      href\n    },\n    features,\n    order\n  }': COMPLIANCE_STANDARDS_QUERY_RESULT;
+    '*[_type == "testimonial"] | order(order asc){\n    _id,\n    quote,\n    author,\n    position,\n    companyLogo,\n    order\n  }': TESTIMONIALS_QUERY_RESULT;
+    '*[_type == "stat"] | order(order asc){\n    _id,\n    value,\n    label,\n    order\n  }': STATS_QUERY_RESULT;
+    '*[_type == "timelineMessage"] | order(order asc){\n    _id,\n    messageId,\n    tag,\n    message,\n    videoDescription,\n    video{\n      mp4,\n      webm,\n      poster\n    },\n    order\n  }': TIMELINE_MESSAGES_QUERY_RESULT;
+    '{\n    "siteConfig": *[_type == "siteConfig"][0]{\n      siteName,\n      siteDescription,\n      siteUrl,\n      contactEmail,\n      tagline,\n      footerLinks[]{\n        label,\n        href,\n        external\n      },\n      copyrightHolder\n    },\n    "homePage": *[_type == "homePage"][0],\n    "phases": *[_type == "platformPhase"] | order(order asc){\n      _id,\n      title,\n      description,\n      video{\n        mp4,\n        webm,\n        poster\n      },\n      order\n    },\n    "sectors": *[_type == "sector"] | order(order asc){\n      _id,\n      title,\n      description,\n      icon,\n      order\n    },\n    "complianceStandards": *[_type == "complianceStandard"] | order(order asc){\n      _id,\n      standardName,\n      description,\n      cta{\n        text,\n        href\n      },\n      features,\n      order\n    },\n    "testimonials": *[_type == "testimonial"] | order(order asc){\n      _id,\n      quote,\n      author,\n      position,\n      companyLogo,\n      order\n    },\n    "stats": *[_type == "stat"] | order(order asc){\n      _id,\n      value,\n      label,\n      order\n    },\n    "timelineMessages": *[_type == "timelineMessage"] | order(order asc){\n      _id,\n      messageId,\n      tag,\n      message,\n      videoDescription,\n      video{\n        mp4,\n        webm,\n        poster\n      },\n      order\n    }\n  }': HOME_PAGE_FULL_QUERY_RESULT;
   }
 }

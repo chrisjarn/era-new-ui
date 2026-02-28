@@ -37,7 +37,7 @@ export const ImageZoom = ({
     <Zoom
       classDialog={cn(
         '[&::backdrop]:hidden',
-        '[&[open]]:pointer-events-auto [&[open]]:fixed [&[open]]:m-0 [&[open]]:h-dvh [&[open]]:max-h-none [&[open]]:w-dvw [&[open]]:max-w-none [&[open]]:overflow-hidden [&[open]]:border-0 [&[open]]:bg-transparent [&[open]]:p-0',
+        '[&[open]]:pointer-events-auto [&[open]]:fixed [&[open]]:m-0 [&[open]]:h-svh [&[open]]:max-h-none [&[open]]:w-dvw [&[open]]:max-w-none [&[open]]:overflow-hidden [&[open]]:border-0 [&[open]]:bg-transparent [&[open]]:p-0',
         '[&_[data-rmiz-modal-overlay]]:absolute [&_[data-rmiz-modal-overlay]]:inset-0 [&_[data-rmiz-modal-overlay]]:transition-all [&_[data-rmiz-modal-overlay]]:duration-300',
         '[&_[data-rmiz-modal-overlay="hidden"]]:bg-transparent',
         '[&_[data-rmiz-modal-overlay="visible"]]:bg-background/80 [&_[data-rmiz-modal-overlay="visible"]]:backdrop-blur-md',

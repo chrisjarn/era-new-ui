@@ -12,7 +12,7 @@ export default async function ContactUsPage() {
   return (
     <Theme theme="dark" global>
       <ScrollToTop />
-      <div className="min-h-dvh flex flex-col bg-white">
+      <div className="min-h-svh flex flex-col bg-white">
         <Wrapper />
         <main className="flex-1">
           <div

@@ -1,7 +1,10 @@
 /* INDEX CSS FILE - Barrel file for importing all the css files */
 @import "tailwindcss/utilities.css";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 @import "./reset.css";
 @import "./tailwind.css";
+@import "./shadcn-theme.css";
 @import "./root.css";
 @import "./global.css";
 @import "./highlight-custom.css";
