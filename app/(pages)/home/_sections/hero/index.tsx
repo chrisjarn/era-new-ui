@@ -102,7 +102,7 @@ export function Hero({
                 {heroTagline ?? 'Location. Capture. Improve. Respond.'}
               </TextEffect>
             </div>
-            <div className="dt:hidden max-w-[320px]">
+            <div className="dt:hidden max-w-[75vw]">
               <TextEffect
                 as="h1"
                 className="typo-hero-mobile text-start text-balance"
